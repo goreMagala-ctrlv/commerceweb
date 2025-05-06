@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="../Front Page/main.css" />
+    <link rel="stylesheet" href="../Product Page/productStyles.css" />
   </head>
   <body>
     <nav>
@@ -27,6 +28,17 @@
     <div class="page-text">
       <h1>Product</h1>
     </div>
+    <main>
+      <div class="left-wrapper"><img id="imageLink" alt="" /></div>
+      <div class="right-wrapper">
+        <h1 id="title" class="title"></h1>
+        <h2 id="price" class="price"></h2>
+        <p id="description"></p>
+        <button id="removeBtn">Remove</button>
+      </div>
+    </main>
+    <h4 id="userMessage" class="message"></h4>
     <script src="../utils/hamburgerScript.js"></script>
+    <script type="module" src="../utils/productPageScript.js"></script>
   </body>
 </html>

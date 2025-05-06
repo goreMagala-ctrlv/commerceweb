@@ -28,9 +28,9 @@ saveBtn.addEventListener("click", async () => {
     if (shoe) {
       goodResponse.textContent = "Shoe was added";
 
-      // setTimeout(() => {
-      //   window.location.replace("../Item Page/index.html");
-      // }, 3000);
+      setTimeout(() => {
+        window.location.replace("../Item Page/index.html");
+      }, 3000);
     }
   } catch (error) {
     console.error("Failed to add:", error);
