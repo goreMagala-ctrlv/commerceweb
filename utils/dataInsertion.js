@@ -1,4 +1,5 @@
 import { insertShoe } from "../utils/fetch.js";
+import { isValidProduct } from "../utils/validation.js";
 
 const titleInput = document.getElementById("title");
 const priceInput = document.getElementById("price");
@@ -7,19 +8,6 @@ const imageLinkInput = document.getElementById("imageLink");
 const descriptionInput = document.getElementById("description");
 const saveBtn = document.getElementById("save-btn");
 const goodResponse = document.getElementById("goodResponse");
-
-const validateInsert = (data) => {
-  if (
-    !data.title ||
-    !data.imageLink ||
-    !data.price ||
-    !data.description ||
-    !data.rating
-  ) {
-    return true;
-  }
-  return false;
-};
 
 saveBtn.addEventListener("click", async () => {
   const data = {
@@ -30,7 +18,7 @@ saveBtn.addEventListener("click", async () => {
     description: descriptionInput.value,
   };
 
-  if (validateInsert(data)) {
+  if (isValidProduct(data)) {
     console.warn("Validation Error: Please check the if inputs are filled.");
     return;
   }
