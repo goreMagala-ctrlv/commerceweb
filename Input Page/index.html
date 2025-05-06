@@ -36,12 +36,16 @@
         <input type="text" id="imageLink" placeholder="Insert Image Url" />
         <textarea
           type="text"
-          id=""
+          id="description"
           placeholder="Write the description of the shoe"
         ></textarea>
-        <button>Save</button>
+        <button id="save-btn">Save</button>
+      </div>
+      <div class="goodResponse-wrap">
+        <h2 id="goodResponse" class="success"></h2>
       </div>
     </main>
-    <script src="./script.js"></script>
+    <script src="../utils/hamburgerScript.js"></script>
+    <script type="module" src="../utils/dataInsertion.js"></script>
   </body>
 </html>
